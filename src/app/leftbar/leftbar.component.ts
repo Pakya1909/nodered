@@ -6,24 +6,35 @@ interface FoodNode {
   name: string;
   children?: FoodNode[];
 }
-
+  
 const TREE_DATA: FoodNode[] = [
   {
-    name: 'Fruit',
-    children: [{name: 'Apple'}, {name: 'Banana'}, {name: 'Fruit loops'}],
+    name: 'Input',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}, {name: 'http'}, {name: 'websocket'}, {name: 'tcp'}, {name: 'udp'}, {name: 'serial'}],
   },
   {
-    name: 'Vegetables',
-    children: [
-      {
-        name: 'Green',
-        children: [{name: 'Broccoli'}, {name: 'Brussels sprouts'}],
-      },
-      {
-        name: 'Orange',
-        children: [{name: 'Pumpkins'}, {name: 'Carrots'}],
-      },
-    ],
+    name: 'Output',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
+  },
+  {
+    name: 'Function',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
+  },
+  {
+    name: 'Social',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
+  },
+  {
+    name: 'Storage',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
+  },
+  {
+    name: 'Analysis',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
+  },
+  {
+    name: 'Advanced',
+    children: [{name: 'inject'}, {name: 'catch'}, {name: 'mtql'}],
   },
 ];
 

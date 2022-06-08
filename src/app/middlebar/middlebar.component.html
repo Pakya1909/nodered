@@ -1,17 +1,25 @@
-<div>
-   <button mat-raised-button class="example-add-tab-button" (click)="addTab(selectAfterAdding.checked)">
-      Add new tab
-   </button>
-   <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+<div class="container">
+   <div class="row">
+      <div class="text-end">
+         <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+         <button mat-raised-button class="example-add-tab-button" (click)="addTab(selectAfterAdding.checked)">
+            Add new tab
+         </button>
+      </div>
+      <div class="row">
+         <mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+            <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+               <div class="text-end">
+                  <button mat-raised-button class="example-delete-tab-button" [disabled]="tabs.length === 1"
+                     (click)="removeTab(index)">
+                     Delete Tab
+                  </button>
+               </div>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facere ab assumenda repellendus illo animi voluptatum deleniti, alias velit minus vitae! Nesciunt recusandae dicta maxime delectus est. Laudantium maxime voluptas quia. Aliquid animi debitis nemo quos dolorum veniam aliquam rerum ex dolorem harum, architecto illo beatae id sit adipisci asperiores cumque quia doloremque aspernatur cupiditate.
+            </mat-tab>
+         </mat-tab-group>
+      </div>
+
+   </div>
+
 </div>
-
-<mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
-   <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
-      Contents for {{tab}} tab
-
-      <button mat-raised-button class="example-delete-tab-button" [disabled]="tabs.length === 1"
-         (click)="removeTab(index)">
-         Delete Tab
-      </button>
-   </mat-tab>
-</mat-tab-group>

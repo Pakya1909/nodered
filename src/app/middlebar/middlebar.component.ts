@@ -10,7 +10,7 @@ import {FormControl} from '@angular/forms';
 })
 export class MiddlebarComponent implements OnInit {
 
-  tabs = ['First', 'Second', 'Third'];
+  tabs = ['First'];
   selected = new FormControl(0);
 
   addTab(selectAfterAdding: boolean) {
@@ -28,4 +28,4 @@ export class MiddlebarComponent implements OnInit {
   }
 
 }
-  
+    
